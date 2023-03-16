@@ -24,10 +24,10 @@ namespace CadastroDeContatos.Controllers
         }
 
         //teste
-        public IActionResult Contatos()
-        {
-            return View();
-        }
+        //public IActionResult Contatos()
+        //{
+        //    return View();
+        //}
 
         //teste
 
