@@ -23,16 +23,6 @@ namespace CadastroDeContatos.Controllers
             return View();
         }
 
-        //teste
-        //public IActionResult Contatos()
-        //{
-        //    return View();
-        //}
-
-        //teste
-
-
-
         public IActionResult Privacy()
         {
             return View();
