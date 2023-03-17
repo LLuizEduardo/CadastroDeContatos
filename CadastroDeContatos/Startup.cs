@@ -1,3 +1,4 @@
+using CadastroDeContatos.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +24,8 @@ namespace CadastroDeContatos
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //adicionar o banco
+            services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
