@@ -1,11 +1,11 @@
-﻿using CadastroDeContatos.Models;
+﻿using CadastroDeContatos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CadastroDeContatos.Data
+namespace CadastroDeContatos
 {
     public class BancoContext : DbContext
     {

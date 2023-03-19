@@ -1,6 +1,6 @@
 using System;
 
-namespace CadastroDeContatos.Models
+namespace CadastroDeContatos
 {
     public class ErrorViewModel
     {

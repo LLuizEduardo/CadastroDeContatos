@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CadastroDeContatos.Models
+namespace CadastroDeContatos
 {
     public class ContatoModel
     {
