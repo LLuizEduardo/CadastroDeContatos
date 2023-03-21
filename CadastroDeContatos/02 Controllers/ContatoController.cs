@@ -36,9 +36,10 @@ namespace CadastroDeContatos
             ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
             return View(contato);
         }
-        public IActionResult ApagarConfirmacao()
+        public IActionResult ApagarConfirmacao(int id)
         {
-            return View();
+            ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
+            return View(contato);
         }
 
 
@@ -53,6 +54,12 @@ namespace CadastroDeContatos
         public IActionResult Alterar(ContatoModel contato)
         {
             _contatoRepositorio.Atualizar(contato);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Apagar(int id)
+        {
+            _contatoRepositorio.Apagar(id);
             return RedirectToAction("Index");
         }
     }

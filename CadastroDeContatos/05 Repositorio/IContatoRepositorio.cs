@@ -11,5 +11,7 @@ namespace CadastroDeContatos
         List<ContatoModel> ListarTodos();
         ContatoModel BuscarPorId(int id);
         ContatoModel Atualizar(ContatoModel contato);
+        bool Apagar(int id);
+
     }
 }

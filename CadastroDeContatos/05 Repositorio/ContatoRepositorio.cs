@@ -39,12 +39,23 @@ namespace CadastroDeContatos
 
             contatoDB.Nome = contato.Nome;
             contatoDB.Email = contato.Email;
-            contatoDB.Telefone= contato.Telefone;
+            contatoDB.Telefone = contato.Telefone;
 
             _bancoContext.Contatos.Update(contatoDB);
             _bancoContext.SaveChanges();
 
             return contatoDB;
+        }
+
+        public bool Apagar(int id)
+        {
+            ContatoModel contatoDB = BuscarPorId(id);
+            if (contatoDB == null) throw new Exception("Houve um erro na exclusão");
+
+            _bancoContext.Contatos.Remove(contatoDB);
+            _bancoContext.SaveChanges();
+
+            return true;
         }
     }
 }
