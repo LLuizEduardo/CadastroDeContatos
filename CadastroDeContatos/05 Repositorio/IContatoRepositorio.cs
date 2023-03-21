@@ -8,5 +8,6 @@ namespace CadastroDeContatos
     public interface IContatoRepositorio
     {
         ContatoModel Adicionar(ContatoModel contato);
+        List<ContatoModel> ListarTodos();
     }
 }

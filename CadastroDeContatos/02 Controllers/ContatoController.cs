@@ -23,7 +23,8 @@ namespace CadastroDeContatos
 
         public IActionResult Index()
         {
-            return View();
+            List<ContatoModel> contatos =_contatoRepositorio.ListarTodos();
+            return View(contatos);
         }
         public IActionResult Criar()
         {

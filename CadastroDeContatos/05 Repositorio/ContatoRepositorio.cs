@@ -21,5 +21,10 @@ namespace CadastroDeContatos
 
             return contato;
         }
+
+        public List<ContatoModel> ListarTodos()
+        {
+            return _bancoContext.Contatos.ToList();
+        }
     }
 }
