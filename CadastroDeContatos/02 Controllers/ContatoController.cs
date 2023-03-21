@@ -23,7 +23,7 @@ namespace CadastroDeContatos
 
         public IActionResult Index()
         {
-            List<ContatoModel> contatos =_contatoRepositorio.ListarTodos();
+            List<ContatoModel> contatos = _contatoRepositorio.ListarTodos();
             return View(contatos);
         }
         public IActionResult Criar()
@@ -31,9 +31,10 @@ namespace CadastroDeContatos
             return View();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+            ContatoModel contato = _contatoRepositorio.BuscarPorId(id);
+            return View(contato);
         }
         public IActionResult ApagarConfirmacao()
         {
@@ -45,6 +46,13 @@ namespace CadastroDeContatos
         public IActionResult Criar(ContatoModel contato)
         {
             _contatoRepositorio.Adicionar(contato);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Alterar(ContatoModel contato)
+        {
+            _contatoRepositorio.Atualizar(contato);
             return RedirectToAction("Index");
         }
     }

@@ -9,5 +9,7 @@ namespace CadastroDeContatos
     {
         ContatoModel Adicionar(ContatoModel contato);
         List<ContatoModel> ListarTodos();
+        ContatoModel BuscarPorId(int id);
+        ContatoModel Atualizar(ContatoModel contato);
     }
 }
